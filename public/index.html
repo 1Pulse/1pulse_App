@@ -203,19 +203,19 @@ body {
 
 </div>
             </div>
-                <!-- Help Desk Section -->
+                <!-- Help Desk Section --
                 <button class="faq-question" onclick="toggleAnswer('helpDeskAnswer')">Community Help Desk</button>
                 <div class="faq-answer" id="helpDeskAnswer">
                     <img style="width: 100%; border-radius: 23px;" src="images/Back-to-School-Stationery-Drive-.jpg" alt="Back to School Drive" class="school-image">
                     <p>The 1Pulse Community Help Desk serves as a vital resource for individuals and families in need, offering assistance in various areas to improve the quality of life within the community.</p>
                     <p>Its mission is to foster inclusivity, create safer environments, and enhance the overall well-being of the community, making it a central hub for those looking to make a positive impact.</p>
-                <!-- Add these after the FAQ or before the Proceed to Map Button -->
+                -- Add these after the FAQ or before the Proceed to Map Button --
     <div class="cta-container">
         <a href="https://m.youtube.com/watch?v=fLQwwh5sSWQ&t=59s&pp=ygUNMXB1bHNlLm9ubGluZQ%3D%3D" class="cta-button">Check Progress</a>
-    </div>
+    </div> -->
                 </div>
 
-            <!-- Business Promotion Section -->
+            <!-- Business Promotion Section --
             <button class="faq-question" onclick="toggleAnswer('promoAnswer')">Business Promotion (R250 for 2 weeks)</button>
             <div class="faq-answer" id="promoAnswer">
                 <img style="width: 100%; border-radius: 23px;" src="https://i.ibb.co/rt7sYXv/easy-cars.jpg" alt="Business Promotion" class="promo-image">
@@ -226,19 +226,19 @@ body {
 <div class="cta-container">
     <a href="https://errandcamel.co.za/carhire" class="cta-button">Sign Up</a>
     </div>
-            </div>
-     <!-- Help Desk Section -->
+            </div>-->
+     <!-- Help Desk Section --
      <button class="faq-question" onclick="toggleAnswer('ComHubAnswer')">Community Development Hub</button>
      <div class="faq-answer" id="ComHubAnswer">
          <img style="width: 100%; border-radius: 23px;" src="images/Back-to-School-Stationery-Drive-.jpg" alt="Back to School Drive" class="school-image">
          <p>The 1Pulse Community Development Hub is a cornerstone of empowerment and growth within the community, dedicated to providing essential resources and support for local development.</p>
          <p>Through collective efforts we  it aims to create spaces that foster collaboration, learning, and development for all members. .</p>
-     <!-- Add these after the FAQ or before the Proceed to Map Button -->
+     -- Add these after the FAQ or before the Proceed to Map Button
 
 <div class="cta-container">
     <a href="https://m.youtube.com/watch?v=fLQwwh5sSWQ&t=59s&pp=ygUNMXB1bHNlLm9ubGluZQ%3D%3D" class="cta-button">Check Progress</a>
 </div>
-     </div>
+     </div> -->
             <!-- Christmas Charity Drive Section 
             <button class="faq-question" onclick="toggleAnswer('charityAnswer')">Christmas Charity Drive</button>
             <div class="faq-answer" id="charityAnswer">
@@ -252,13 +252,13 @@ body {
 </div>  ---->
 
 
-            <!-- Back to School Drive Section -->
+            <!-- Back to School Drive Section --
             <button class="faq-question" onclick="toggleAnswer('schoolAnswer')">Back to School Uniform & Stationery Drive</button>
             <div class="faq-answer" id="schoolAnswer">
                 <img style="width: 100%; border-radius: 23px;" src="images/Back-to-School-Stationery-Drive-.jpg" alt="Back to School Drive" class="school-image">
                 <p>We are organizing a drive to collect uniforms and stationery for children going back to school. Your donations can help children in need get the supplies they need to start the school year!</p>
                 <p>Help make sure every child has the tools they need to succeed. If you'd like to contribute to the back-to-school drive, please get in touch with us through the platform.</p>
-            <!-- Add these after the FAQ or before the Proceed to Map Button -->
+            -- Add these after the FAQ or before the Proceed to Map Button -->
 <!----
 <div class="cta-container">
     <a href="school-progress.html" class="cta-button">View Progress</a>
@@ -266,10 +266,31 @@ body {
             </div>
 
 
-            <!-- Proceed to App Button --->
+            <!-- Proceed to App Button ---
             <div class="cta-container">
                 <a href="map.html" class="cta-button">Proceed to Map</a>
-            </div>
+            </div>--->
+            <div class="cta-container">
+    <a href="#" class="cta-button" id="mapButton">Proceed to Map</a>
+  </div>
+
+  <script>
+    function isSafari() {
+      const ua = navigator.userAgent;
+      return /^((?!chrome|android).)*safari/i.test(ua);
+    }
+
+    document.getElementById('mapButton').addEventListener('click', function (e) {
+      e.preventDefault();
+      if (isSafari()) {
+        // Open embedded map directly in a new tab for Safari
+        window.open('https://1pulse-online-beta.netlify.app/', '_blank');
+      } else {
+        // Navigate to the iframe wrapper
+        window.location.href = 'map.html';
+      }
+    });
+  </script>
         </div>
     </div>
 </body>
