@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Modal</title>
+  <style>
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-box {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: slideIn 0.4s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-box h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .modal-box p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .modal-box .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .modal-box .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal-overlay" id="guestModal">
+  <div class="modal-box">
+    <h2>You are viewing as a guest</h2>
+    <p>To get live interactions, please login.</p>
+    <button class="btn" onclick="closeModal()">OK</button>
+    <button class="btn" onclick="location.href='login.html'">Login</button>
+  </div>
+</div>
+
+<script>
+  function closeModal() {
+    document.getElementById("guestModal").style.display = "none";
+  }
+
+  // Show modal after 3 seconds
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      document.getElementById("guestModal").style.display = "flex";
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>
